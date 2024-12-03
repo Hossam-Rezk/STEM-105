@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <h1>Project Title</h1>
+            <ul class="nav-links">
+                <li><a href="#temperature-card">Temperature</a></li>
+                <li><a href="#mq135-card">Air Quality</a></li>
+                <li><a href="#sound-sensor-card">Sound Level</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="card" id="temperature-card">
+            <h2>Temperature</h2>
+            <canvas id="temperatureChart"></canvas>
+        </div>
+        <div class="card" id="mq135-card">
+            <h2>Air Quality</h2>
+            <canvas id="mq135Chart"></canvas>
+        </div>
+        <div class="card" id="sound-sensor-card">
+            <h2>Sound Level</h2>
+            <canvas id="soundChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="stat-card">
+            <i class="fas fa-thermometer-half"></i>
+            <h3>Avg Temperature</h3>
+            <p id="avg-temp">-- °C</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-smog"></i>
+            <h3>Avg Air Quality</h3>
+            <p id="avg-air">-- ppm</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-volume-up"></i>
+            <h3>Avg Sound Level</h3>
+            <p id="avg-sound">-- dB</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>Threshold Warning</h3>
+            <p id="warning" style="display: none; color: red; font-weight: bold;">--</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Project Title | STEM [Branch]</p>
+        <p>Developed by: [Student Name 1], [Student Name 2], [Student Name 3]</p>
+        <button id="connectButton">Connect to Arduino</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

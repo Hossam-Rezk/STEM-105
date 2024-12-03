@@ -1,0 +1,184 @@
+/* General styles remain unchanged */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f4f7, #dfe9f3); /* Light background gradient */
+  color: #333; /* Dark text for contrast */
+}
+
+nav {
+  background: linear-gradient(90deg, #4e9af1, #2a6496); /* Updated nav colors: light blue gradient */
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+nav h1 {
+  color: #ffffff; /* White text for nav title */
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Increased space between links */
+  justify-content: center;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00; /* Updated hover color to yellow */
+  transform: scale(1.1);
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  justify-content: center; /* Center the content */
+  padding: 30px 0;
+  gap: 30px; /* Reduced gap between cards */
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 25px; /* Reduced padding inside the card */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Bigger shadow */
+  max-width: 350px;  /* Wider cards */
+  flex: 1;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Larger shadow */
+  background-color: #f4f7f9;  /* Subtle background color change */
+}
+
+.card h2 {
+  margin-bottom: 20px; /* Reduced space below the title */
+  font-size: 26px; /* Bigger title size */
+  color: #4e9af1; /* Blue title color */
+}
+
+/* Stats Section */
+.stats-section {
+  margin-top: 30px; /* Reduced top margin */
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px; /* Reduced gap between stat cards */
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background-color: #f9f9f9; /* Soft background */
+  padding: 20px; /* Reduced padding in stat cards */
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 280px; /* Larger cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card i {
+  font-size: 45px;
+  margin-bottom: 12px;
+  color: #4e9af1; /* Blue icons */
+}
+
+.stat-card h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #333;
+}
+
+.stat-card p {
+  font-size: 26px; /* Smaller font size for better balance */
+  font-weight: bold;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px; /* Reduced margin-top */
+  background: linear-gradient(90deg, #2a6496, #4e9af1);
+  padding: 15px; /* Reduced padding for a smaller footer */
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px; /* Smaller font size for footer */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+footer p {
+  margin-bottom: 5px; /* Reduced space between footer paragraphs */
+}
+
+/* Warning Text */
+#warning {
+  color: #e74c3c; /* Bright red for warnings */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Specific styling for the sound sensor stats */
+#avg-sound {
+  color: #ff9472; /* Coral for sound sensor stats */
+}
+
+/* Remove sticky navbar for non-scrolling design */
+nav {
+  position: relative;
+  background: linear-gradient(90deg, #4e9af1, #2a6496);
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure no extra space between graphs and boxes (AVG stats) */
+@media (min-width: 1000px) {
+  .container {
+    padding: 30px 10%; /* Reduced the overall padding */
+  }
+
+  .card {
+    margin-bottom: 20px; /* Added space below cards */
+  }
+
+  .stats-section {
+    margin-top: 20px; /* Reduced gap between stats section and graphs */
+  }
+}
